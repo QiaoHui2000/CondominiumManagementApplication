@@ -18,13 +18,16 @@ while ($row = mysqli_fetch_array($response)){
 	$index['facilityName'] = $row['1'];
 	$index['maintenanceTime'] = $row['2'];
 	$index['maintenanceDate'] = $row['3'];
+	$index['maintenanceReason'] = $row['4'];
 	
 	array_push($result['item'], $index);
 }
 
 	$result["success"] = "1";
 	echo json_encode($result);
-	mysql_close($conn);
+	mysqli_close($conn);
+
+
 
 
 ?>
