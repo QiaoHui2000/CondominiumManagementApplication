@@ -10,8 +10,9 @@ $maintenanceID = $_POST['maintenanceID'];
 $facilityName = $_POST['facilityName'];
 $maintenanceTime = $_POST['maintenanceTime'];
 $maintenanceDate = $_POST['maintenanceDate'];
+$maintenanceReason = $_POST['maintenanceReason'];
 
-$sql = "UPDATE maintenance SET facilityName = '$facilityName',maintenanceTime = '$maintenanceTime',maintenanceDate = '$maintenanceDate' WHERE maintenanceID = '$maintenanceID'";
+$sql = "UPDATE maintenance SET facilityName = '$facilityName',maintenanceTime = '$maintenanceTime',maintenanceDate = '$maintenanceDate', maintenanceReason = '$maintenanceReason' WHERE maintenanceID = '$maintenanceID'";
 
 $result = mysqli_query($conn, $sql);
 
