@@ -28,7 +28,7 @@ import java.util.Map;
 public class Facilities_Report extends AppCompatActivity {
 
     TextView txtReport;
-    ImageButton btnBack,btnSearch ;
+    ImageButton btnBack,btnSearch;
     EditText edSearch;
 
     @Override
