@@ -76,9 +76,6 @@ public class AddNewBooking extends AppCompatActivity {
                     SimpleDateFormat simpleDateFormat = new SimpleDateFormat("yyyy-MM-dd");
                     String date = simpleDateFormat.format(cldr.getTime());
 
-
-
-
                     //Get day, month, year
                     int day = cldr.get(Calendar.DAY_OF_MONTH);
                     int month = cldr.get(Calendar.MONTH);
@@ -178,9 +175,9 @@ public class AddNewBooking extends AppCompatActivity {
         }
         else {
             addBooking(facilityName,bookingTime,bookingDate);
-            Intent intentBack = new Intent(AddNewBooking.this,
+            /*Intent intentBack = new Intent(AddNewBooking.this,
                     Successful_Booked_Facility.class);
-            startActivity(intentBack);
+            startActivity(intentBack);*/
 
         }
     }
@@ -203,7 +200,20 @@ public class AddNewBooking extends AppCompatActivity {
                 try {
                     JSONObject jsonObject = new JSONObject(response);
                     // on below line we are displaying a success toast message.
-                    Toast.makeText(AddNewBooking.this, jsonObject.getString("message"), Toast.LENGTH_SHORT).show();
+                    //Toast.makeText(AddNewBooking.this, jsonObject.getString("message"), Toast.LENGTH_SHORT).show();
+                    if (jsonObject.get("code").equals("201")){
+                        Intent intent = new Intent(AddNewBooking.this,Successful_Booked_Facility.class);
+                        startActivity(intent);
+                        Toast.makeText(AddNewBooking.this, jsonObject.getString("msg"), Toast.LENGTH_SHORT).show();
+                    }
+                    if (jsonObject.get("code").equals("202")) {
+                        Toast.makeText(AddNewBooking.this, jsonObject.getString("msg"), Toast.LENGTH_SHORT).show();
+                    }
+                    if (jsonObject.get("code").equals("200")) {
+                        Toast.makeText(AddNewBooking.this, jsonObject.getString("msg"), Toast.LENGTH_LONG).show();
+                        //btnBook.setEnabled(false);
+                    }
+
                 } catch (JSONException e) {
                     e.printStackTrace();
                 }
