@@ -161,9 +161,9 @@ public class Edit_booking_info extends AppCompatActivity {
         } else {
 
             //Intent to Successful Added Maintenance Screen
-            Intent intentSuccess = new Intent(Edit_booking_info.this,
+            /*Intent intentSuccess = new Intent(Edit_booking_info.this,
                     Successful_Updated_Booking.class);
-            startActivity(intentSuccess);
+            startActivity(intentSuccess);*/
         }
 
         final ProgressDialog progressDialog = new ProgressDialog(this);

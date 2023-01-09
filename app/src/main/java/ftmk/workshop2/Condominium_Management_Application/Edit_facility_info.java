@@ -83,9 +83,9 @@ public class Edit_facility_info extends AppCompatActivity {
         }else {
             //UpdateData(facilityName, location, capacity);
             //Intent to Successful Added Facilities Screen
-            Intent intentSuccess = new Intent(Edit_facility_info.this,
+           /* Intent intentSuccess = new Intent(Edit_facility_info.this,
                     SuccessfulUpdatedFacility.class);
-            startActivity(intentSuccess);
+            startActivity(intentSuccess);*/
         }
 
 

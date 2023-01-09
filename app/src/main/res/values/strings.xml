@@ -7,6 +7,7 @@
         <item>3pm-5pm</item>
         <item>5pm-7pm</item>
         <item>7pm-9pm</item>
+        <item>9pm-11pm</item>
     </string-array>
 
     <string-array name="str3">
@@ -15,4 +16,5 @@
         <item>Renovation Work</item>
         <item>Pest Control</item>
     </string-array>
+
 </resources>

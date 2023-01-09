@@ -1,11 +1,14 @@
 package ftmk.workshop2.Condominium_Management_Application;
 
+import android.app.Dialog;
 import android.app.ProgressDialog;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
+import android.view.ViewGroup;
 import android.widget.AdapterView;
+import android.widget.Button;
 import android.widget.ImageButton;
 import android.widget.ListView;
 import android.widget.Toast;
@@ -68,7 +71,22 @@ public class FacilitiesList extends AppCompatActivity {
                 builder.setItems(dialogItem, new DialogInterface.OnClickListener() {
                     @Override
                     public void onClick(DialogInterface dialog, int i) {
+                        Dialog customDialog;
+                        customDialog = new Dialog(FacilitiesList.this);
+                        customDialog.setContentView(R.layout.custom_dialog);
+                        customDialog.getWindow().setLayout(ViewGroup.LayoutParams.MATCH_PARENT,ViewGroup.LayoutParams.WRAP_CONTENT);
+                        customDialog.setCancelable(false);
+                        customDialog.getWindow().getAttributes().windowAnimations = androidx.appcompat.R.style.Animation_AppCompat_Dialog;
 
+                        Button delete = customDialog.findViewById(R.id.btn_delete);
+                        Button cancel = customDialog.findViewById(R.id.btn_cancel);
+
+                        cancel.setOnClickListener(new View.OnClickListener() {
+                            @Override
+                            public void onClick(View view) {
+                                customDialog.dismiss();
+                            }
+                        });
                         switch (i){
 
                             case 0:
@@ -80,8 +98,18 @@ public class FacilitiesList extends AppCompatActivity {
                                         .putExtra("position",position));
                                 break;
                             case 2:
-                                deleteData(facilityArrayList.get(position).getFacilityID());
-                                
+                                customDialog.show();
+                                delete.setOnClickListener(new View.OnClickListener() {
+                                    @Override
+                                    public void onClick(View view) {
+                                        deleteData(facilityArrayList.get(position).getFacilityID());
+                                        customDialog.dismiss();
+                                        Intent intent = new Intent(FacilitiesList.this,
+                                                FacilitiesList.class);
+                                        startActivity(intent);
+                                        overridePendingTransition(android.R.anim.fade_in,android.R.anim.fade_out);
+                                    }
+                                });
                                 break;
                         }
 

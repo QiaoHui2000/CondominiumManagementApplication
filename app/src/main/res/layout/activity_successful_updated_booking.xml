@@ -83,7 +83,7 @@
         app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.803"
+        app:layout_constraintVertical_bias="0.698"
         app:srcCompat="@drawable/successfull_icon" />
 
     <ImageView
@@ -99,24 +99,38 @@
         app:srcCompat="@drawable/building" />
 
     <Button
+        android:id="@+id/btnAddMoreBooking"
+        android:layout_width="214dp"
+        android:layout_height="50dp"
+        android:layout_marginBottom="236dp"
+        android:background="@drawable/black_btn"
+        android:text="Add Another Booking"
+        android:textColor="#FDFCFC"
+        android:textSize="16sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.502"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <Button
         android:id="@+id/btnViewBookingList"
         android:layout_width="214dp"
         android:layout_height="50dp"
-        android:layout_marginBottom="212dp"
+        android:layout_marginBottom="176dp"
         android:background="@drawable/black_btn"
         android:text="View Booking List"
         android:textColor="#FDFCFC"
         android:textSize="16sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintHorizontal_bias="0.502"
         app:layout_constraintStart_toStartOf="parent" />
 
     <Button
         android:id="@+id/btnDone"
         android:layout_width="128dp"
         android:layout_height="50dp"
-        android:layout_marginBottom="152dp"
+
         android:background="@drawable/black_btn"
         android:text="Done"
         android:textColor="#FDFCFC"
@@ -126,6 +140,6 @@
         app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/btnViewBookingList"
-        app:layout_constraintVertical_bias="1.0" />
+        app:layout_constraintVertical_bias="0.053" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

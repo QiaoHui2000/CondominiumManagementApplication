@@ -166,9 +166,9 @@ public class Edit_maintenance_info extends AppCompatActivity {
         } else {
 
             //Intent to Successful Added Maintenance Screen
-            Intent intentSuccess = new Intent(Edit_maintenance_info.this,
+            /*Intent intentSuccess = new Intent(Edit_maintenance_info.this,
                     Successful_Updated_Maintenance.class);
-            startActivity(intentSuccess);
+            startActivity(intentSuccess);*/
         }
 
         final ProgressDialog progressDialog = new ProgressDialog(this);

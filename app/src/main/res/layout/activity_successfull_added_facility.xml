@@ -54,7 +54,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/txtAdded"
-        app:layout_constraintVertical_bias="0.465"
+        app:layout_constraintVertical_bias="0.298"
         app:srcCompat="@drawable/white_column" />
 
     <TextView
@@ -83,7 +83,7 @@
         app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.803"
+        app:layout_constraintVertical_bias="0.609"
         app:srcCompat="@drawable/successfull_icon" />
 
     <ImageView
@@ -98,10 +98,24 @@
         app:srcCompat="@drawable/building" />
 
     <Button
+        android:id="@+id/btnAddMoreFacility"
+        android:layout_width="214dp"
+        android:layout_height="50dp"
+        android:layout_marginBottom="248dp"
+        android:background="@drawable/black_btn"
+        android:text="Add Another Facility"
+        android:textColor="#FDFCFC"
+        android:textSize="16sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <Button
         android:id="@+id/btnViewFacilitiesList"
         android:layout_width="214dp"
         android:layout_height="50dp"
-        android:layout_marginBottom="208dp"
+        android:layout_marginBottom="188dp"
         android:background="@drawable/black_btn"
         android:text="View Facilities List"
         android:textColor="#FDFCFC"
@@ -115,7 +129,6 @@
         android:id="@+id/btnDone"
         android:layout_width="128dp"
         android:layout_height="50dp"
-        android:layout_marginBottom="152dp"
         android:background="@drawable/black_btn"
         android:text="Done"
         android:textColor="#FDFCFC"
@@ -125,6 +138,6 @@
         app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/btnViewFacilitiesList"
-        app:layout_constraintVertical_bias="1.0" />
+        app:layout_constraintVertical_bias="0.094" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -11,7 +11,7 @@ import androidx.appcompat.app.AppCompatActivity;
 public class Successful_Booked_Facility extends AppCompatActivity {
 
     ImageButton btnBack, btnHome;
-    Button btnViewBList, btnDone;
+    Button btnViewBList, btnDone, btnAddMore;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -23,8 +23,10 @@ public class Successful_Booked_Facility extends AppCompatActivity {
         btnHome = (ImageButton) findViewById(R.id.btnHome);
         btnViewBList = (Button) findViewById(R.id.btnViewBookingList);
         btnDone = (Button) findViewById(R.id.btnDone);
+        btnAddMore = (Button) findViewById(R.id.btnAddMoreBooking);
 
-        //Intent to Add Maintenance
+
+        //Intent to Add Booking
         btnBack.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -44,12 +46,22 @@ public class Successful_Booked_Facility extends AppCompatActivity {
             }
         });
 
-        //Intent to Maintenance List
+        //Intent to Booking List
         btnViewBList.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 Intent intentBack = new Intent(Successful_Booked_Facility.this,
                         BookingList.class);
+                startActivity(intentBack);
+            }
+        });
+
+        //Intent to Add Booking
+        btnAddMore.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intentBack = new Intent(Successful_Booked_Facility.this,
+                        AddNewBooking.class);
                 startActivity(intentBack);
             }
         });

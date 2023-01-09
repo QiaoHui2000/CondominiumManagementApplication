@@ -99,9 +99,9 @@ public class AddNewFacility extends AppCompatActivity {
             }else {
                 InsertData(facilityName, location, capacity);
                 //Intent to Successful Added Facilities Screen
-                Intent intentSuccess = new Intent(AddNewFacility.this,
+                /*Intent intentSuccess = new Intent(AddNewFacility.this,
                         SuccessfulAddedFacility.class);
-                startActivity(intentSuccess);
+                startActivity(intentSuccess);*/
             }
     }
 
@@ -120,8 +120,21 @@ public class AddNewFacility extends AppCompatActivity {
                 try {
                     JSONObject jsonObject = new JSONObject(response);
                     // on below line we are displaying a success toast message.
-                    Toast.makeText(AddNewFacility.this,
-                            jsonObject.getString("message"), Toast.LENGTH_SHORT).show();
+                    /*Toast.makeText(AddNewFacility.this,
+                            jsonObject.getString("message"), Toast.LENGTH_SHORT).show();*/
+                    if (jsonObject.get("code").equals("201")){
+                        Intent intentSuccess = new Intent(AddNewFacility.this,
+                                SuccessfulAddedFacility.class);
+                        startActivity(intentSuccess);
+                        Toast.makeText(AddNewFacility.this, jsonObject.getString("msg"), Toast.LENGTH_LONG).show();
+                    }
+                    if (jsonObject.get("code").equals("202")){
+                        Toast.makeText(AddNewFacility.this, jsonObject.getString("msg"), Toast.LENGTH_SHORT).show();
+                    }
+                    if (jsonObject.get("code").equals("200")){
+                        Toast.makeText(AddNewFacility.this, jsonObject.getString("msg"), Toast.LENGTH_SHORT).show();
+                    }
+
                 } catch (JSONException e) {
                     e.printStackTrace();
                 }
