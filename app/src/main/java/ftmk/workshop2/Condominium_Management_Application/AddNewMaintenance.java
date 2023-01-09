@@ -38,13 +38,14 @@ import java.util.Map;
 
 public class AddNewMaintenance extends AppCompatActivity {
 
-    Spinner spinnerFacility, spinnerTime;
+    Spinner spinnerFacility, spinnerTime, spinnerReason;
     ImageButton btnBack, btnEdit;
     EditText edTxtDate;
     Button btnSave;
 
-    private String facilityName, maintenanceTime, maintenanceDate;
+    private String facilityName, maintenanceTime, maintenanceDate, maintenanceReason;
     private DatePickerDialog datePicker;
+
     //String url1 = "http://10.131.77.213/";
     String url1 = "http://192.168.1.14/";
     //String url1 = "http://192.168.0.8/";
@@ -172,16 +173,18 @@ public class AddNewMaintenance extends AppCompatActivity {
 
         spinnerFacility = (Spinner) findViewById(R.id.spinnerFacility);
         spinnerTime = (Spinner) findViewById(R.id.spinnerTime);
+        spinnerReason = (Spinner) findViewById(R.id.spinnerReason);
         edTxtDate = (EditText) findViewById(R.id.editTxtDate);
         facilityName = spinnerFacility.getSelectedItem().toString().trim();
         maintenanceTime = spinnerTime.getSelectedItem().toString().trim();
+        maintenanceReason = spinnerReason.getSelectedItem().toString().trim();
         maintenanceDate = edTxtDate.getText().toString().trim();
 
         if(TextUtils.isEmpty(maintenanceDate)){
             edTxtDate.setError("Please select maintenance date.");
         }
         else {
-            addMaintenance(facilityName,maintenanceTime,maintenanceDate);
+            addMaintenance(facilityName,maintenanceTime,maintenanceDate, maintenanceReason);
             Intent intentBack = new Intent(AddNewMaintenance.this,
                     Successful_Saved_Maintenance.class);
             startActivity(intentBack);
@@ -190,7 +193,7 @@ public class AddNewMaintenance extends AppCompatActivity {
 
     }
 
-    private void addMaintenance(String facilityName, String maintenanceTime, String maintenanceDate)
+    private void addMaintenance(String facilityName, String maintenanceTime, String maintenanceDate, String maintenanceReason)
     {
         // url to post our data
         String url = url1+"insert_maintenance.php";
@@ -232,6 +235,7 @@ public class AddNewMaintenance extends AppCompatActivity {
                 params.put("facilityName", facilityName);
                 params.put("maintenanceTime", maintenanceTime);
                 params.put("maintenanceDate", maintenanceDate);
+                params.put("maintenanceReason", maintenanceReason);
 
                 return params;
             }

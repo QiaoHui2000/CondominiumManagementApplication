@@ -39,7 +39,7 @@ import java.util.Map;
 
 public class Edit_maintenance_info extends AppCompatActivity {
 
-    Spinner spinnerFacility, spinnerTime;
+    Spinner spinnerFacility, spinnerTime, spinnerReason;
     ImageButton btnBack;
     EditText edTxtDate, etID;
     Button btnUpdate;
@@ -64,6 +64,7 @@ public class Edit_maintenance_info extends AppCompatActivity {
         btnBack = (ImageButton) findViewById(R.id.btnBack);
         spinnerFacility = (Spinner) findViewById(R.id.spinnerFacility);
         spinnerTime = (Spinner) findViewById(R.id.spinnerTime);
+        spinnerReason = (Spinner) findViewById(R.id.spinnerReason);
         edTxtDate = (EditText) findViewById(R.id.editTxtDate);
         etID = (EditText) findViewById(R.id.editTxtMID);
         btnUpdate = (Button) findViewById(R.id.btnUpdate);
@@ -107,6 +108,7 @@ public class Edit_maintenance_info extends AppCompatActivity {
         etID.setText(MaintenanceList.maintenanceArrayList.get(position).getMaintenanceID());
         spinnerFacility.setPrompt(MaintenanceList.maintenanceArrayList.get(position).getFacilityName());
         spinnerTime.setPrompt(MaintenanceList.maintenanceArrayList.get(position).getMaintenanceTime());
+        spinnerReason.setPrompt(MaintenanceList.maintenanceArrayList.get(position).getMaintenanceReason());
         edTxtDate.setText(MaintenanceList.maintenanceArrayList.get(position).getMaintenanceDate());
 
         //Intent to Maintenance List
@@ -156,6 +158,7 @@ public class Edit_maintenance_info extends AppCompatActivity {
         final String maintenanceTime = spinnerTime.getSelectedItem().toString().trim();
         final String maintenanceDate = edTxtDate.getText().toString().trim();
         final String maintenanceID = etID.getText().toString().trim();
+        final String maintenanceReason = spinnerReason.getSelectedItem().toString().trim();
 
         // Give a warning to user when the field is empty
         if (TextUtils.isEmpty(facilityName)) {
@@ -200,6 +203,7 @@ public class Edit_maintenance_info extends AppCompatActivity {
                 params.put("facilityName", facilityName);
                 params.put("maintenanceTime", maintenanceTime);
                 params.put("maintenanceDate", maintenanceDate);
+                params.put("maintenanceReason", maintenanceReason);
 
                 return params;
             }
@@ -210,6 +214,4 @@ public class Edit_maintenance_info extends AppCompatActivity {
 
 
 
-    //Update maintenance to database
-    //make calendar in edtDate
 }

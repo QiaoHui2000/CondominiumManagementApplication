@@ -73,7 +73,7 @@ public class Facilities_Report extends AppCompatActivity {
                                         String bookingTime = jsonObject.getString("BookingTime");
                                         String bookingDate = jsonObject.getString("BookingDate");
 
-                                        txtReport.append("\nBooking ID: " + bookingID + "\nFacility Name: "
+                                        txtReport.append("\n\nBooking ID: " + bookingID + "\nFacility Name: "
                                                 + facilityName + "\nBooking Time: " + bookingTime + "\nBooking Date: "
                                                 + bookingDate + "\n\n");
                                     }

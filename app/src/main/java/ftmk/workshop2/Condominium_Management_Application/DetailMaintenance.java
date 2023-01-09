@@ -10,7 +10,7 @@ import androidx.appcompat.app.AppCompatActivity;
 
 public class DetailMaintenance extends AppCompatActivity {
 
-    TextView tvid,tvName,tvTime,tvDate;
+    TextView tvid,tvName,tvTime,tvDate,tvReason;
     ImageButton btnBack;
     int position;
 
@@ -24,6 +24,7 @@ public class DetailMaintenance extends AppCompatActivity {
         tvName = findViewById(R.id.txtName);
         tvTime = findViewById(R.id.txtTime);
         tvDate = findViewById(R.id.txtDate);
+        tvReason = findViewById(R.id.txtReason);
         btnBack = (ImageButton)findViewById(R.id.btnBack);
 
         //Intent to Facilities List
@@ -44,6 +45,7 @@ public class DetailMaintenance extends AppCompatActivity {
         tvName.setText("Facility Name: "+MaintenanceList.maintenanceArrayList.get(position).getFacilityName());
         tvTime.setText("Maintenance Time: "+MaintenanceList.maintenanceArrayList.get(position).getMaintenanceTime());
         tvDate.setText("Maintenance Date: "+MaintenanceList.maintenanceArrayList.get(position).getMaintenanceDate());
+        tvReason.setText("Maintenance Reason: "+MaintenanceList.maintenanceArrayList.get(position).getMaintenanceReason());
 
     }
 }

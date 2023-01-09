@@ -8,4 +8,11 @@
         <item>5pm-7pm</item>
         <item>7pm-9pm</item>
     </string-array>
+
+    <string-array name="str3">
+        <item>Cleaning, Sanitizing and Disinfect</item>
+        <item>Construction</item>
+        <item>Renovation Work</item>
+        <item>Pest Control</item>
+    </string-array>
 </resources>

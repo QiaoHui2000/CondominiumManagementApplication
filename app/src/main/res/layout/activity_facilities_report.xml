@@ -9,7 +9,6 @@
     android:background="#E6EEF4"
     tools:context=".Facilities_Report">
 
-
     <ImageButton
         android:id="@+id/btnBack"
         android:layout_width="47dp"
@@ -26,10 +25,7 @@
         app:layout_constraintHorizontal_bias="0.079"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
-
     />
-
-
 
     <TextView
         android:id="@+id/detailFacility"
@@ -49,73 +45,6 @@
         app:layout_constraintHorizontal_bias="0.589"
         app:layout_constraintStart_toEndOf="@+id/btnBack"
         app:layout_constraintTop_toTopOf="parent" />
-
-    <!--<EditText
-        android:id="@+id/editSearchFacility"
-        android:layout_width="277dp"
-        android:layout_height="wrap_content"
-        android:layout_below="@id/detailFacility"
-        android:layout_marginLeft="25dp"
-        android:layout_marginTop="10dp"
-        android:background="@drawable/white_column"
-        android:hint="Search Facility Name"
-        android:padding="10dp" />
-
-    <ImageButton
-    android:id="@+id/btn_search"
-    android:layout_width="41dp"
-    android:layout_height="39dp"
-    android:layout_below="@id/detailFacility"
-    android:layout_centerHorizontal="true"
-    android:layout_marginTop="10dp"
-    android:layout_marginLeft="10dp"
-    android:layout_toRightOf="@id/editSearchFacility"
-    android:background="@drawable/ic_baseline_search_24"
-    android:padding="15dp"
-    android:textColor="#FFFFFF" />-->
-
-
-    <!--<TextView
-        android:layout_height="wrap_content"
-        android:layout_width="359dp"
-        android:layout_centerHorizontal="true"
-        android:background="@drawable/white_column"
-        android:layout_below="@id/txtid"
-        android:padding="10dp"
-        android:textColor="@color/black"
-        android:text="Facility Name:"
-        android:textSize="20sp"
-        android:id="@+id/txtName"
-        android:layout_marginBottom="10dp"
-        />
-
-    <TextView
-        android:layout_height="wrap_content"
-        android:layout_width="359dp"
-        android:layout_centerHorizontal="true"
-        android:background="@drawable/white_column"
-        android:layout_below="@id/txtName"
-        android:padding="10dp"
-        android:textColor="@color/black"
-        android:text="Location:"
-        android:textSize="20sp"
-        android:id="@+id/txtLocation"
-        android:layout_marginBottom="10dp"
-        />
-
-    <TextView
-        android:layout_height="wrap_content"
-        android:layout_width="359dp"
-        android:layout_centerHorizontal="true"
-        android:background="@drawable/white_column"
-        android:layout_below="@+id/txtLocation"
-        android:padding="10dp"
-        android:textColor="@color/black"
-        android:text="Capacity:"
-        android:textSize="20sp"
-        android:id="@+id/txtCapacity"
-        android:layout_marginBottom="10dp"
-        />-->
 
     <ScrollView
         android:id="@+id/scroll"
@@ -137,7 +66,6 @@
             android:padding="10dp"
             android:textColor="@color/black"
             android:textSize="20sp" />
-
 
     </ScrollView>
 

@@ -228,8 +228,9 @@ public class MaintenanceList extends AppCompatActivity {
                                     String FacilityName = object.getString("facilityName");
                                     String MaintenanceTime = object.getString("maintenanceTime");
                                     String MaintenanceDate = object.getString("maintenanceDate");
+                                    String MaintenanceReason = object.getString("maintenanceReason");
 
-                                    maintenance = new Maintenance(MaintenanceID, FacilityName, MaintenanceTime,MaintenanceDate);
+                                    maintenance = new Maintenance(MaintenanceID, FacilityName, MaintenanceTime,MaintenanceDate, MaintenanceReason);
                                     maintenanceArrayList.add(maintenance);
                                     maintenanceAdapter.notifyDataSetChanged();
                                 }

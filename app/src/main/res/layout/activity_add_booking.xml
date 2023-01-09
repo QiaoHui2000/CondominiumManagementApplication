@@ -162,15 +162,140 @@
         tools:layout_editor_absoluteY="166dp" />
 
 
+    <!--<LinearLayout
+        android:id="@+id/head_calendar"
+        android:layout_width="336dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/txtDate"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="5dp"
+
+        android:background="#FFFFFF"
+        android:orientation="horizontal">
+
+        <Button
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@null"
+            android:onClick="previousMonthAction"
+            android:text="To previous"
+            android:textColor="@color/blue"
+            android:textSize="10sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/monthYearTV"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="2"
+            android:text="Jan 2023"
+            android:textAlignment="center"
+            android:textColor="@color/black"
+            android:textSize="20sp" />
+
+        <Button
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@null"
+            android:onClick="nextMonthAction"
+            android:text="To next"
+            android:textColor="@color/blue"
+            android:textSize="10sp"
+            android:textStyle="bold" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="336dp"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@+id/head_calendar"
+        android:id="@+id/calendar_cell"
+        android:background="#FFFFFF"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="SUN"
+            android:textColor="@color/gray"
+            android:textAlignment="center"
+            android:textSize="16sp"/>
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="MON"
+            android:textColor="@color/gray"
+            android:textAlignment="center"
+            android:textSize="16sp"/>
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="TUE"
+            android:textColor="@color/gray"
+            android:textAlignment="center"
+            android:textSize="16sp"/>
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="WED"
+            android:textColor="@color/gray"
+            android:textAlignment="center"
+            android:textSize="16sp"/>
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="THUR"
+            android:textColor="@color/gray"
+            android:textAlignment="center"
+            android:textSize="16sp"/>
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="FRI"
+            android:textColor="@color/gray"
+            android:textAlignment="center"
+            android:textSize="16sp"/>
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="SAT"
+            android:textColor="@color/gray"
+            android:textAlignment="center"
+            android:textSize="16sp"/>
+    </LinearLayout>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/calendarRecyclerView"
+        android:layout_width="336dp"
+        android:layout_height="209dp"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@+id/calendar_cell"
+        android:background="#FFFFFF" />-->
 
     <Button
         android:id="@+id/btnBook"
         android:layout_width="136dp"
         android:layout_height="48dp"
         android:layout_marginTop="20dp"
-        android:layout_marginBottom="97dp"
+        android:layout_marginBottom="0dp"
         android:background="@drawable/black_btn"
-        android:layout_below="@id/editBookingDate"
+        android:layout_below="@+id/editBookingDate"
         android:text="Book"
         android:textColor="#F2F6F6"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -180,7 +305,7 @@
         android:layout_centerHorizontal="true"
         app:layout_constraintVertical_bias="0.0" />
 
-    <ImageView
+    <!--<ImageView
         android:id="@+id/imageView2"
         android:layout_width="412dp"
         android:layout_height="wrap_content"
@@ -194,6 +319,6 @@
         android:layout_marginEnd="-1dp"
         android:layout_marginBottom="1dp"
         android:scaleType="fitEnd"
-        app:srcCompat="@drawable/building" />
+        app:srcCompat="@drawable/building" />-->
 
 </RelativeLayout>

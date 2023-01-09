@@ -190,15 +190,49 @@
         tools:layout_editor_absoluteX="59dp"
         tools:layout_editor_absoluteY="166dp" />
 
+    <TextView
+        android:id="@+id/txtReason"
+        android:layout_width="214dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/editTxtDate"
+        android:layout_marginStart="55dp"
+        android:layout_marginLeft="55dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="500dp"
+        android:text="Maintenance Reason"
+        android:textColor="#050505"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        />
+
+    <Spinner
+        android:id="@+id/spinnerReason"
+        android:layout_width="310dp"
+        android:layout_height="50dp"
+        android:layout_centerVertical="true"
+        android:background="@drawable/spinner_style"
+        android:gravity="center"
+        android:spinnerMode="dropdown"
+        android:padding="10dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.507"
+        app:layout_constraintStart_toStartOf="parent"
+        android:entries="@array/str3"
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="50dp"
+        android:layout_marginStart="50dp"
+        android:layout_marginEnd="50dp"
+        android:elevation="10dp"
+        android:layout_below="@id/txtReason"/>
 
     <Button
         android:id="@+id/btnUpdate"
         android:layout_width="136dp"
         android:layout_height="48dp"
         android:layout_marginTop="40dp"
-        android:layout_marginBottom="97dp"
+        android:layout_marginBottom="10dp"
         android:background="@drawable/black_btn"
-        android:layout_below="@id/editTxtDate"
+        android:layout_below="@id/spinnerReason"
         android:text="Update"
         android:textColor="#F2F6F6"
         app:layout_constraintBottom_toBottomOf="parent"

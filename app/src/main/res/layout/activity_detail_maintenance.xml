@@ -101,6 +101,20 @@
         android:layout_marginBottom="10dp"
         />
 
+    <TextView
+        android:layout_height="wrap_content"
+        android:layout_width="359dp"
+        android:layout_centerHorizontal="true"
+        android:background="@drawable/white_column"
+        android:layout_below="@+id/txtDate"
+        android:padding="10dp"
+        android:textColor="@color/black"
+        android:text="Maintenance Reason:"
+        android:textSize="20sp"
+        android:id="@+id/txtReason"
+        android:layout_marginBottom="10dp"
+        />
+
     <ImageView
         android:id="@+id/imageView2"
         android:layout_width="412dp"
