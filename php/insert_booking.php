@@ -17,7 +17,7 @@ $resq = "";
 
 if (mysqli_num_rows($result) > 0) {
     $resp['code'] = "200";
-    $resp["msg"] = "This slot already booked.";
+    $resp["msg"] = "This slot already booked. Please choose another slot.";
 }else{
     $query = "INSERT INTO booking (facilityName, bookingTime, bookingDate) 
 	VALUES ('$facilityName', '$bookingTime','$bookingDate')";
