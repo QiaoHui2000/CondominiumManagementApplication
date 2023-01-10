@@ -53,7 +53,8 @@ public class AddNewBooking extends AppCompatActivity {
     ArrayAdapter<String> facilityAdapter;
     RequestQueue requestQueue;
     //String url1 = "http://10.131.77.213/";
-    String url1 = "http://192.168.1.14/";
+   // String url1 = "http://192.168.1.14/";
+    String url1 = "http://10.131.73.139/";
     //String url1 = "http://192.168.0.8/";
 
     @Override

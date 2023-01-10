@@ -34,7 +34,8 @@ public class AddNewFacility extends AppCompatActivity {
     private EditText etName, etLocation, etCapacity;
     private String facilityName,location,capacity;
     //String url1 = "http://10.131.77.213/";
-    String url1 = "http://192.168.1.14/";
+    //String url1 = "http://192.168.1.14/";
+    String url1 = "http://10.131.73.139/";
     //String url1 = "http://192.168.0.8/";
 
 

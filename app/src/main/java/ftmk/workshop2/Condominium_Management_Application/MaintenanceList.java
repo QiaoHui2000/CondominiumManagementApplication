@@ -44,7 +44,8 @@ public class MaintenanceList extends AppCompatActivity {
     public static ArrayList<Maintenance> maintenanceArrayList = new ArrayList<>();
     Maintenance maintenance;
     //String url1 = "http://10.131.77.213/";
-    String url1 = "http://192.168.1.14/";
+    //String url1 = "http://192.168.1.14/";
+    String url1 = "http://10.131.73.139/";
     //String url1 = "http://192.168.0.8/";
     String url = url1+"get_maintenance.php";
 

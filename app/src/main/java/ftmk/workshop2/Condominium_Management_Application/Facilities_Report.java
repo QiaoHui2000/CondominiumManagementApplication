@@ -57,7 +57,7 @@ public class Facilities_Report extends AppCompatActivity {
             public void onClick(View view) {*/
                 //String data = edSearch.getText().toString();
                 RequestQueue queue = Volley.newRequestQueue(getApplicationContext());
-                String url = "http://192.168.1.14/booking_report.php";
+                String url = "http://10.131.73.139/booking_report.php";
 
                 StringRequest stringRequest = new StringRequest(Request.Method.POST, url,
                         new Response.Listener<String>() {
