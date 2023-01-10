@@ -11,11 +11,19 @@ $facilityName = $_POST['facilityName'];
 $bookingDate = $_POST['bookingDate'];
 $bookingTime = $_POST['bookingTime'];
 
+$maintenanceTime =$_POST['$maintenanceTime'];
+$$maintenanceDate =$_POST['maintenanceDate'];
+//$$maintenanceReason =$_POST['maintenanceReason'];
+
 $checkQuery = "SELECT * FROM booking WHERE facilityName = '$facilityName'&& bookingTime ='$bookingTime'&& bookingDate ='$bookingDate'";
+
+$maintenanceQuery = "SELECT * FROM maintenance WHERE facilityName = '$facilityName'&& maintenanceTime ='$bookingTime'&& maintenanceDate ='$bookingDate'";
+
 $result = mysqli_query($conn,$checkQuery);
+$results = mysqli_query($conn,$maintenanceQuery);
 $resq = "";
 
-if (mysqli_num_rows($result) > 0) {
+if (mysqli_num_rows($result) > 0 | mysqli_num_rows($results) > 0) {
     $resp['code'] = "200";
     $resp["msg"] = "This slot already booked. Please choose another slot.";
 }else{
@@ -35,6 +43,7 @@ echo json_encode($resp);
 
 		
 mysqli_close($conn);
+
 /*$Sql_Query = "INSERT INTO booking (facilityName,bookingDate,bookingTime) VALUES ('$facilityName', '$bookingDate', '$bookingTime')";
 
 if(mysqli_query($conn,$Sql_Query)){
