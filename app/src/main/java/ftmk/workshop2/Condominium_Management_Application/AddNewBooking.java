@@ -238,6 +238,8 @@ public class AddNewBooking extends AppCompatActivity {
                 params.put("facilityName", facilityName);
                 params.put("bookingTime", bookingTime);
                 params.put("bookingDate", bookingDate);
+                params.put("bookingDate", bookingDate);
+                params.put("bookingDate", bookingDate);
 
                 return params;
             }
